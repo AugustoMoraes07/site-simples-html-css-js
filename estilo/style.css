@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --btncolor: #ffffff;
+    --btnbg: #969696;
+}
+
+*{
+    font-family: Helvetica;
+
+}
+
+h1{
+    font-family: monospace;
+}
+
+li{
+    list-style: circle;
+}
+.list{
+    list-style: square;
+}
+
+.light-theme{
+    color: var(--black);
+    background-color: var(--white);
+    --btnbg: var(--btncolor);
+    --btncolor: var(--btnbg);
+}
+.dark-theme{
+    color: var(--white);
+    background-color: var(--black);
+    --btncolor: var(--btncolor);
+    --btnbg: var(--btnbg);
+}
+
+.btn{
+    color: var(--btncolor);
+    background-color: var(--btnbg);
+
+    
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.btn:focus{
+    outline-style: none;
+
+}
