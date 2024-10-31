@@ -1,15 +1,18 @@
-"use strict"
+const botao = document.querySelector('.btn')
 
-const switcher - document.querySelector('.btn')
-switcher.addEventListener('click', function(){
-    document.body.classList.toggle('dark-theme')
+//Detectar o tema atual
+let tatual = document.body.classList.contains('light-theme')?'Tema Claro':'Tema Escuro'
 
-    var classname=document.body.className;
-    if(className -- "light-theme"){
-        this.textcontent - "Tema Escuro";
-    }
-    else {
-        this.textcontent - "Tema Claro"
-    }
-    
-});
+//Mudar o tema
+function mudarTema(){
+  if(tatual === 'Tema Claro'){
+    document.body.classList.remove('light-theme')
+    document.body.classList.add('dark-theme')
+    tatual = 'Tema Escuro'
+  } else{
+    document.body.classList.remove('dark-theme')
+    document.body.classList.add('light-theme')
+    tatual = 'Tema Claro'
+  }
+  botao.innerText = tatual === 'Tema Claro'?'Claro':'Escuro'
+}

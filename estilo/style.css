@@ -8,12 +8,18 @@
 }
 
 *{
-    font-family: Helvetica;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
-h1{
-    font-family: monospace;
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 li{
@@ -36,18 +42,25 @@ li{
     --btnbg: var(--btnbg);
 }
 
+h1{
+    margin: 20px;
+}
+
 .btn{
     color: var(--btncolor);
     background-color: var(--btnbg);
 
-    
-    position: absolute;
-    top: 200px;
-    left: 10px;
+    margin-top: 20px;
     width: 50px;
     height: 50px;
     border-radius: 5px;
+    border: 1px solid gray;
 }
+
+.btn:hover{
+    background-color: #c0c0c0;
+}
+
 .btn:focus{
     outline-style: none;
 
